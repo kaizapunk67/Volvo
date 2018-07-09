@@ -1,0 +1,41 @@
+<div class="form-group" [formGroup]="rForm">
+<mat-form-field>
+  Name:
+<input type="text" matInput class="formControl" formControlName="name" [(ngModel)]= "this.data.details.name">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Surname:
+<input type="text" matInput class="formControl" formControlName="surname" [(ngModel)]= "this.data.details.surname">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Phone:
+  <input type="text" matInput class="formControl" formControlName="phone" [(ngModel)]= "this.data.details.phone">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Street:
+  <input type="text" matInput class="formControl" formControlName="street" [(ngModel)]= "this.data.details.street">
+</mat-form-field>
+<br>
+<mat-form-field>
+  City:
+  <input type="text" matInput class="formControl" formControlName="city" [(ngModel)]= "this.data.details.city">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <input matInput [matDatepicker]="picker1" placeholder="BirthDate" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+  <br>
+<mat-form-field>
+    Number:
+    <input type="text" matInput class="formControl" formControlName="number" [(ngModel)]= "this.data.details.number">
+  </mat-form-field>
+<div>
+  <button mat-button (click)="close()">Close</button>
+  <button mat-button [disabled]="!rForm.valid" (click)="onregister()" >Add</button>
+</div>
+</div>
